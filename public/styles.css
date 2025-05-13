@@ -1,206 +1,285 @@
-  /* Reset y estilos básicos */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+:root {
+    --kingswell-primary: #000000;
+    --kingswell-dark: #151415;
+    --kingswell-gray: #4a4a4a;
+    --kingswell-light-gray: #f8f9fa;
 }
 
 body {
-    color: #333;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Header completo */
 header {
-    background-color: #fff;
-}
-
-.container {
-    width: 100%;
-    padding: 0 20px;
-}
-
-/* Barra superior con logo y enlaces */
-.top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #e1e1e1;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #0056b3;
-}
-
-.info-links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.info-links a {
-    color: #555;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.info-links a:hover {
-    color: #0056b3;
-}
-
-.nav-divider {
-    color: #ccc;
-}
-
-/* Navegación principal */
-.main-nav {
-    padding: 15px 0;
-    border-bottom: 1px solid #e1e1e1;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.nav-links a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.nav-links a:hover {
-    color: #0056b3;
-}
-
-/* Hero section - Banner completo */
-.hero {
-
-    min-height: 548px;
-    text-align: center;
-    background-color: #f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
 }
 
+.text-primary,
+.logo,
+.top-header .info-links a,
+.footer-contacto .text-primary {
+    color: var(--kingswell-primary) !important;
+}
 
-.hero-content {
+.bg-primary {
+    background-color: var(--kingswell-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--kingswell-primary) !important;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+    background-color: var(--kingswell-primary);
+    border-color: var(--kingswell-primary);
+}
+
+.btn-primary:hover {
+    background-color: #00418a;
+    border-color: #003775;
+}
+
+.btn-outline-primary {
+    color: var(--kingswell-primary);
+    border-color: var(--kingswell-primary);
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+}
+
+.badge.bg-primary-subtle {
+    background-color: #cfe2ff !important;
+    color: #003a75 !important;
+}
+
+.navbar {
+    background-color: transparent !important;
+    border-bottom-color: transparent !important;
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar.navbar-scrolled {
+    background-color: white !important;
+    border-bottom-color: #dee2e6 !important;
+}
+
+.navbar.navbar-scrolled .nav-link,
+.navbar.navbar-scrolled .navbar-brand {
+    color: black !important;
+}
+
+.hero {
+    min-height: 682px;
+    background: url('./assets/kingswell-welcome.png') no-repeat fixed;
+    background-size: cover;
+    background-position: 0 -230px;
+    position: relative;
+}
+
+.hero .university-name {
+    color: #fffdfd;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.info-button-container a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.quality-education .section-title {
+    font-size: 2.5rem; 
+    text-align: left;
+}
+
+.quality-education .section-description {
+    font-size: 1.25rem; 
+    text-align: left; 
+}
+
+.quality-education .action-buttons {
+    justify-content: flex-start; 
+}
+
+.quality-education .action-buttons .btn {
+    font-size: 1.25rem; 
+    padding: 0.75rem 1.5rem; 
+}
+
+.quality-education .action-buttons .btn-dark {
+    background-color: var(--kingswell-dark);
+    border-color: var(--kingswell-dark);
+}
+
+.quality-education .action-buttons .btn-dark:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.quality-education .container {
+    text-align: left;
+    margin-left: 0; 
+
+    padding-left: 6.5rem;
+}
+
+.news-cards .card-actions a.link-dark:hover i {
+    transform: translateX(4px);
+    transition: transform 0.2s ease-out;
+}
+
+
+.card-img, .card-img-top {
     width: 100%;
-    padding: 60px 0;
+    height: 200px; 
+    object-fit:cover; 
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.university-name {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #222;
+.card.text-bg-dark .card-img {
+    height: 300px; 
+    object-fit: cover;
 }
 
-/* Botón "Más Información" al 100% del banner */
-.info-button-container {
+.placeholder-image {
+    background-color: #e9ecef;
     width: 100%;
-    background-color: #151415;
-    padding: 5px 0;
-    text-align: center;
+    min-height: 180px;
+    border-bottom: 1px solid #dee2e6;
 }
 
-.info-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 1px;
+.campus-news{
+    padding: 8rem 0 11rem 0;
 }
 
+.programas {
+    padding: 8rem 0 11rem 0;
+}
 
+.investigaciones {
+    background-color: var(--kingswell-gray) !important;
+}
 
-/* Responsive */
-@media (max-width: 768px) {
-    .top-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-        padding: 15px;
-    }
-    
-    .nav-links {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    
-    .university-name {
-        font-size: 36px;
-    }
-    
-    .info-button {
-        padding: 12px 20px;
-        font-size: 16px;
+.proximos-eventos{
+    padding: 8rem 0 11rem 0;
+}
+
+.contacto {
+    padding: 8rem 0 11rem 0;
+}
+
+@media (min-width: 768px) {
+    .research-stats .stat-item:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
     }
 }
 
-.quality-education {
-    padding: 60px 83px;
-    max-width: 1000px;
+.evento .fecha {
+    min-width: 65px;
+    border-radius: 0;
 }
 
-.section-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #0056b3;
-    margin-bottom: 20px;
+.evento .fecha .dia-semana {
+    font-size: 0.65rem;
 }
 
-.section-description {
-    font-size: 18px;
-    line-height: 1.6;
+.evento .fecha .dia {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.evento .fecha .mes-anio {
+    font-size: 0.6rem;
+}
+
+.proyecto .caracteristicas .badge {
+    font-size: 0.75rem;
+    padding: 0.3em 0.6em;
+}
+
+.mapa iframe {
+    filter: grayscale(80%);
+    transition: filter 0.3s;
+}
+
+.mapa iframe:hover {
+    filter: grayscale(0%);
+}
+
+.footer-contacto .logo {
     color: #333;
-    margin-bottom: 30px;
- 
 }
 
-.action-buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
+.sticky-headers-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
 }
 
-.action-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #000000;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+.sticky-headers-wrapper.fixed-headers {
+    position: fixed !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.sticky-headers-wrapper .top-header {
+    background-color: transparent !important;
+    border-bottom-color: transparent !important;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
 
+.sticky-headers-wrapper:not(.fixed-headers) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
-/* Responsive */
+.sticky-headers-wrapper:not(.fixed-headers) .top-header .logo,
+.sticky-headers-wrapper:not(.fixed-headers) .top-header .info-links a,
+.sticky-headers-wrapper:not(.fixed-headers) .top-header .info-links .text-muted,
+.sticky-headers-wrapper:not(.fixed-headers) .top-header .info-links span {
+    color: white !important;
+    transition: color 0.3s;
+}
+
+.sticky-headers-wrapper.fixed-headers .top-header {
+    background-color: var(--kingswell-light-gray) !important;
+    border-bottom-color: #dee2e6 !important;
+}
+
+.sticky-headers-wrapper.fixed-headers .top-header .logo {
+    color: var(--kingswell-primary) !important;
+}
+
+.sticky-headers-wrapper.fixed-headers .top-header .info-links a {
+    color: #555 !important;
+}
+
+.sticky-headers-wrapper.fixed-headers .top-header .info-links a:hover {
+    color: var(--kingswell-primary) !important;
+}
+
 @media (max-width: 768px) {
-    .action-buttons {
-        flex-direction: column;
-        gap: 10px;
+    .display-3 {
+        font-size: 2.5rem;
     }
-    
-    .action-button {
-        width: 100%;
-        text-align: center;
+
+    .display-5 {
+        font-size: 2.1rem;
+    }
+
+    .lead {
+        font-size: 1rem;
     }
 }
